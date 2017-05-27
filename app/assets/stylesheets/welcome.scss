@@ -2,5 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .social-btn {
-    
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    height: 12px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.social-btn:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
 }
