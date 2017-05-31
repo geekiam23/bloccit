@@ -11,7 +11,7 @@ module RandomData
     def self.random_sentence
         strings = []
         rand(3..8).times do
-            string << random_word
+            strings << random_word
         end
 
         sentence = strings.join(" ")
