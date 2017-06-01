@@ -17,12 +17,10 @@ posts = Post.all
     )
 end
 
-puts "#{Post.count}"
 Post.find_or_create_by!(
     title: 'What do you think about Bloccit?',
     body: 'I love it so far!'
 )
-puts "#{Post.count}"
 
 puts "Seed finished"
 puts "#{Post.count} posts created"
