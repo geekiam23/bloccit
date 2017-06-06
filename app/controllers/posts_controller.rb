@@ -9,11 +9,6 @@ class PostsController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-  end
-
-  def new
-=======
       @post = Post.find(params[:id])
   end
 
@@ -33,7 +28,6 @@ class PostsController < ApplicationController
           flash.now[:alert] = "There was an error saving the post. Please try again."
           render :new
       end
->>>>>>> bloccit-19
   end
 
   def edit
