@@ -17,6 +17,15 @@ posts = Post.all
     )
 end
 
+#create questions
+100.times do
+    Question.create!(
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph,
+    resolved: false
+    )
+end
+
 Post.find_or_create_by!(
     title: 'What do you think about Bloccit?',
     body: 'I love it so far!'
@@ -25,3 +34,4 @@ Post.find_or_create_by!(
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Questions.count} questions created"
