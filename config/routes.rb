@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  resources :questions
+    resources :topics do
+      resources :posts, except: [:index]
+    end
 
-  resources :advertisements
+    resources :questions
 
-  resources :posts
+    resources :advertisements
 
-  get 'about' => 'welcome#about'
+    get 'about' => 'welcome#about'
 
-  root 'welcome#index'
+    root 'welcome#index'
 
 end
