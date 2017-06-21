@@ -1,5 +1,15 @@
 require 'random_data'
 
+# Create Users
+5.times do
+  User.create!(
+  name:     RandomData.random_name,
+  email:    RandomData.random_email,
+  password: RandomData.random_sentence
+  )
+end
+users = User.all
+
 # Create Topics
 15.times do
     Topic.create!(
@@ -12,9 +22,10 @@ topics = Topic.all
 #create posts
 50.times do
     Post.create!(
-    topic: topics.sample,
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph
+    user:   users.sample,
+    topic:  topics.sample,
+    title:  RandomData.random_sentence,
+    body:   RandomData.random_paragraph
     )
 end
 posts = Post.all
@@ -36,14 +47,14 @@ end
     )
 end
 
-Post.find_or_create_by!(
-    title: 'What do you think about Bloccit?',
-    body: 'I love it so far!'
+user = User.first
+user.update_attributes!(
+    email: 'will23larry@gmail.com',
+    password: 'helloworld'
 )
 
-
-
 puts "Seed finished"
+puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
