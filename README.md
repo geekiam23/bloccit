@@ -4,7 +4,7 @@ Bloccit is a Reddit inspired application
 
 Users can sign up, create posts, comment on posts, vote on posts, favorite posts and receive updates on their favorite posts via email.
 
-Demo Site
+[Demo Site](https://wl-bloccit.herokuapp.com/)
 
 Project Objectives
 
