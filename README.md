@@ -1,6 +1,6 @@
 == README
 
-Bloccit is a Reddit inspired application
+Shareit is a Reddit inspired application
 
 Users can sign up, create posts, comment on posts, vote on posts, favorite posts and receive updates on their favorite posts via email.
 
