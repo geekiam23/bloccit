@@ -9,6 +9,7 @@ RSpec.describe SponsoredPost, type: :model do
   let(:topic) { Topic.create!(name: name, description: description) }
   let(:sponsored_post) { topic.sponsored_posts.create!(title: title, body: body, price: 99) }
 
+
   it { is_expected.to belong_to(:topic) }
 
    describe "attributes" do
